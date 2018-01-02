@@ -1,0 +1,11 @@
+{
+  "name": "proxy",
+  "version": "0.0.1",
+  "description": "Simple Proxy",
+  "author": "Daniel Garcia Moreno <danigm@wadobo.com>",
+  "license": "GPLv3",
+  "dependencies": {
+    "express": "*",
+    "request": "*"
+  }
+}
