@@ -18,7 +18,9 @@ var app = express();
 APPS.forEach(function(a) {
     app.use(a.path, function(req, res) {
       var url = a.base + req.url;
-      req.pipe(request(url)).pipe(res);
+      req.pipe(request(url)).on('error', function(err) {
+        console.log("Error:", err.code);
+      }).pipe(res);
     });
 });
 
